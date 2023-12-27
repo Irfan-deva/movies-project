@@ -6,3 +6,7 @@ function rootPath($path = '') {
 function loadView($name, $data = '') {
   require rootPath("views/$name.view.php");
 }
+
+function loadPartial($name) {
+  require rootPath("partials/$name.php");
+}

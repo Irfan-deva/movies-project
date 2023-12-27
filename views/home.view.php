@@ -1,2 +1,3 @@
 <?php
-echo 'home page';
+loadPartial('header');
+loadPartial('footer');
