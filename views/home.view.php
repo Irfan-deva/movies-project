@@ -1,8 +1,96 @@
-<?php
-loadPartial('header'); ?>
-<div class="content">
-  <h3>home</h3>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit numquam dolores distinctio debitis saepe atque ratione quaerat cupiditate esse vitae, sit, nostrum, nulla non perspiciatis. Modi sequi facilis provident numquam architecto possimus, commodi, eos quis aliquid hic, culpa voluptate reiciendis? Alias dolor quae sequi optio natus. Perferendis, eligendi nostrum cumque pariatur quisquam odio est sequi fuga nihil beatae veniam repellendus exercitationem! Perspiciatis facere quibusdam id eos ducimus delectus accusantium natus consequatur facilis quisquam possimus sequi dignissimos magni incidunt, vel, modi quis numquam ratione ullam harum quod? A ut, minima vero asperiores aliquid, accusantium perspiciatis perferendis velit provident illo incidunt sint hic impedit delectus error mollitia cupiditate, iste praesentium quisquam! Quos, eos. Aperiam quod recusandae harum quia aut deleniti sapiente labore odit beatae natus eum dolorem illum provident nesciunt iure consectetur quos dolorum necessitatibus numquam, nostrum voluptatum animi. Ea nihil blanditiis vitae dicta delectus exercitationem autem voluptatem. Repellendus, minus laborum aut dolore aliquam dolor similique magni enim earum a debitis tempore, eligendi rerum sit iure odio reprehenderit laudantium sint consequatur error quos libero soluta? Reiciendis quam est quisquam quod inventore corporis nulla impedit alias sint aliquam qui aut dolore optio pariatur fugit, asperiores, cum suscipit temporibus accusamus ratione aperiam mollitia? Amet quasi doloribus, vel excepturi earum reprehenderit a. Dolorum modi porro impedit voluptas laborum hic debitis, recusandae quod ducimus? Aspernatur aut accusamus sit nisi modi consequatur, deserunt, repellat quia dicta laudantium voluptatibus ipsa iste minima earum inventore consectetur quibusdam maxime nobis voluptates. At, suscipit mollitia? Consequatur est ipsum fuga voluptatum enim odio sapiente, esse saepe porro similique rem praesentium unde quibusdam numquam totam et expedita dolore quaerat illo. Iusto aperiam reprehenderit recusandae doloremque deserunt, nisi voluptate sint vitae excepturi iure hic et dolore error eveniet illum doloribus obcaecati veniam eos culpa quis illo. Aut, molestiae commodi a aliquid sit delectus doloribus exercitationem velit nulla aspernatur maxime officiis blanditiis labore! Eum, aperiam aliquam libero ullam in molestias adipisci suscipit? Error quo facere tempore aliquid libero! Dolores aliquam porro non quis vel dolorem fugit eos odit, alias harum aut laborum quasi quia voluptatem! Expedita repellendus asperiores eveniet ipsum cupiditate eius exercitationem ab voluptatum iure tempora tempore sapiente iusto doloribus, soluta corrupti labore assumenda non? Corrupti facilis eum facere excepturi officia molestias tempora voluptatibus doloremque quos accusantium inventore atque velit nemo, illum itaque eaque dicta obcaecati commodi quis qui autem nostrum sapiente sint fugiat. Autem asperiores suscipit in dolorem quia minima qui beatae, vitae repellendus! Blanditiis quae harum fugit molestias illum quibusdam porro cumque quisquam non, rerum vero excepturi esse, deleniti labore velit dolores similique minus iure minima necessitatibus maiores ipsa accusantium tenetur totam? Voluptatem animi cum obcaecati tempore aut amet suscipit praesentium illo autem aliquid ullam reprehenderit optio enim aliquam excepturi facere facilis fuga sapiente, placeat illum nobis veritatis vel perspiciatis similique. Sint non dolores numquam magni facere nobis accusamus! Obcaecati deserunt quo eius delectus itaque, consectetur quasi aliquam ipsam facere beatae. Numquam iste, ea officiis dolorem distinctio modi aut? Consequuntur dolor optio ipsa, excepturi nisi quibusdam. Ipsa, eius harum cumque blanditiis cupiditate ab quo sed vel accusantium nostrum voluptatum, voluptates laboriosam dolore atque officia hic maxime quidem quos, quasi sint voluptatibus aperiam. Nesciunt minus nihil quisquam numquam id ea molestiae voluptatem, quod rerum architecto sed libero corporis dolor laboriosam. Fugiat doloremque modi earum cum sunt impedit explicabo est repellendus reprehenderit ipsa fuga nisi, architecto in hic porro nemo commodi laboriosam? Culpa assumenda illum pariatur voluptas at? Modi nihil aspernatur eaque hic vel eligendi, maiores ullam accusamus laudantium, sunt expedita inventore molestiae dolorum labore, quia natus corporis nemo quos quod distinctio! Nulla esse harum quas. Nisi asperiores consequuntur repellat quidem fugiat saepe culpa.</p>
+<div class="wrapper">
+  <?php
+  loadPartial('header'); ?>
+  <div class="content">
+    <div class="movies">
+      <div class="title py">
+        <div class="latest">Latest</div>
+        <div class="view-all">View All &gt;&gt;</div>
+      </div>
+
+      <div class="movie-cards">
+        <?php
+        $count = -1;
+        $count_title = ['one', 'two', 'three', 'four', 'five'];
+        foreach ($data as $movie) {
+          $count++;
+          echo "
+          <div class='card $count_title[$count]'>
+        <div class=card-header>
+        <div class='card-cover'>
+        <img src='http://127.0.0.1/MOVIESPROJ/images/spiderman.jpeg'/>
+        </div>
+        <div class=card-footer>
+        $movie[_name]
+        </div>
+        </div>
+        </div>
+        ";
+        }
+        ?>
+      </div>
+    </div>
+    <div class="latest">
+      <div class="movies">
+        <div class="title">
+          <div class="latest">Latest</div>
+          <div class="view-all">View All &gt;&gt;</div>
+        </div>
+
+        <div class="movie-cards">
+          <?php
+          $count = -1;
+          $count_title = ['one', 'two', 'three', 'four', 'five'];
+          foreach ($data as $movie) {
+            $count++;
+            echo "
+          <div class='card $count_title[$count]'>
+        <div class=card-header>
+        <div class='card-cover'>
+        <img src='http://127.0.0.1/MOVIESPROJ/images/spiderman.jpeg'/>
+        </div>
+        <div class=card-footer>
+        $movie[_name]
+        </div>
+        </div>
+        </div>
+        ";
+          }
+          ?>
+        </div>
+      </div>
+    </div>
+    <div class="popular">
+      <div class="movies">
+        <div class="title">
+          <div class="latest">Latest</div>
+          <div class="view-all">View All &gt;&gt;</div>
+        </div>
+
+        <div class="movie-cards">
+          <?php
+          $count = -1;
+          $count_title = ['one', 'two', 'three', 'four', 'five'];
+          foreach ($data as $movie) {
+            $count++;
+            echo "
+          <div class='card $count_title[$count]'>
+        <div class=card-header>
+        <div class='card-cover'>
+        <img src='http://127.0.0.1/MOVIESPROJ/images/spiderman.jpeg'/>
+        </div>
+        <div class=card-footer>
+        $movie[_name]
+        </div>
+        </div>
+        </div>
+        ";
+          }
+          ?>
+        </div>
+      </div>
+    </div>
+  </div>
+  <?php
+  loadPartial('footer'); ?>
 </div>
-<?php
-loadPartial('footer');

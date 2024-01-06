@@ -27,4 +27,7 @@
     <div id="menu-toggle">
       <span></span>
     </div>
+    <div class="search">
+      <input type="text" name="" id="">
+    </div>
   </div>
